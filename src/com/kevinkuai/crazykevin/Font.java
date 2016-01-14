@@ -31,7 +31,7 @@ public class Font {
 		int len = text.length();
 		for (int i = 0; i<len; i++){
 			int c = text.charAt(i)-' ';
-			if(c<0 || c>glyphs.length-1)
+			if(c<0 || c>(glyphs.length-1))
 				continue;
 			
 			TextureRegion glyph = glyphs[c];

@@ -27,9 +27,9 @@ public class MainMenuScreen extends GLScreen {
 		cam = new Camera2D(glGraphics, 320, 480);
 		batcher = new SpriteBatcher(glGraphics, 100);
 		soundBounds = new Rectangle(0,0,64,64);
-		playBounds = new Rectangle(160-150,200+18,300,36);
-		highScoresBounds = new Rectangle(160-150, 200-18, 300,36);
-		helpBounds = new Rectangle(160-150,200-36,300,36);
+		playBounds = new Rectangle(160-150,200-36,300,108);
+		//highScoresBounds = new Rectangle(160-150, 200-18, 300,36);
+		//helpBounds = new Rectangle(160-150,200-36,300,36);
 		touchPoint = new Vector();
 	}
 
@@ -51,17 +51,17 @@ public class MainMenuScreen extends GLScreen {
 					return;
 				}
 				
-				if(OverlapTest.pointInRec(highScoresBounds, touchPoint)){
+				/*if(OverlapTest.pointInRec(highScoresBounds, touchPoint)){
 					Assets.playSound(Assets.clickSound);
 					game.setScreen(new HighScoreScreen(game));
 					return;
-				}
+				}*/
 				
-				if(OverlapTest.pointInRec(helpBounds, touchPoint)){
+				/*if(OverlapTest.pointInRec(helpBounds, touchPoint)){
 					Assets.playSound(Assets.clickSound);
 					game.setScreen(new HelpScreen(game));
 					return;
-				}
+				}*/
 				
 				if(OverlapTest.pointInRec(soundBounds, touchPoint)){
 					Assets.playSound(Assets.clickSound);
